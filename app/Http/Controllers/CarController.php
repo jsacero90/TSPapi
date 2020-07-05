@@ -8,7 +8,7 @@ use App\models\Products;
 class CarController extends Controller
 {
 
-    public function index(Request $request)
+    public function index($request)
     {
         try {
             $productos = Car::paginate(15); // $estado array con los resultados trae una paginación maxima de 15 terminos ejemplo

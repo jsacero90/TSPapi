@@ -25,4 +25,6 @@ $router->group(['middleware' => ['json', 'auth']], function () use ($router)
     $router->post('/api/car', ['uses' => 'CarController@create']);
     $router->put('/api/car', ['uses' => 'CarController@update']);
     $router->delete('/api/car', ['uses' => 'CarController@delete']);
+    // controller categorias
+    $router->get('/api/categorias', ['uses' => 'CategoriaController@index']);
 });
