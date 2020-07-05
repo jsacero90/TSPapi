@@ -72,13 +72,14 @@ $app->configure('app');
 |
 */
 
-// $app->middleware([
+$app->middleware([
 //    App\Http\Middleware\FormatJson::class
-// ]);
+   App\Http\Middleware\CorsMiddleware::class
+]);
 
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
-    'json' => App\Http\Middleware\FormatJson::class,
+    'json' => App\Http\Middleware\FormatJson::class
  ]);
 
 /*
