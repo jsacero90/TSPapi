@@ -19,7 +19,7 @@ $router->group(['middleware' => ['json', 'auth']], function () use ($router)
 {
     // controller productos
     $router->get('/api/productos', ['uses' => 'ProductsController@index']);
-    $router->get('/api/productos/{id}', ['uses' => 'ProductsController@id_producto']);
+    $router->get('/api/producto/{id}', ['uses' => 'ProductsController@id_producto']);
     // controller car
     $router->get('/api/car', ['uses' => 'CarController@index']);
     $router->post('/api/car', ['uses' => 'CarController@create']);

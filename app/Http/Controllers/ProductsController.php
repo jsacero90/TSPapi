@@ -10,7 +10,7 @@ class ProductsController extends Controller
     public function index(Request $request)
     {
         try {
-            $productos = Products::paginate(15); // $estado array con los resultados trae una paginación maxima de 15 terminos ejemplo
+            $productos = Products::all(); // $estado array con los resultados trae una paginación maxima de 15 terminos ejemplo
             //servidor.net/api/productos?page=1 esta seria la url generada
             return response()->json($productos, 200);
         } catch (\Exception $e) {
