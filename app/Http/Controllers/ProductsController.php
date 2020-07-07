@@ -22,7 +22,7 @@ class ProductsController extends Controller
     public function id_producto(Request $request, $id)
         {
             try {
-                $productos = Products::where('id',$id)->get();
+                $productos = Products::where('id_producto',$id)->get();
                 return response()->json($productos, 200);
             } catch (\Exception $e) {
                 return response()->json(['error' => 'Not Found'], 404);
